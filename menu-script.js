@@ -12,7 +12,7 @@ const menuData = {
                 protein: 8,
                 carbs: 35,
                 fat: 18,
-                price: 1079
+                price: 299
             },
             'pancakes': {
                 name: 'Fluffy Pancakes',
@@ -23,7 +23,7 @@ const menuData = {
                 protein: 12,
                 carbs: 65,
                 fat: 15,
-                price: 912
+                price: 249
             },
             'eggs-benedict': {
                 name: 'Eggs Benedict',
@@ -34,7 +34,7 @@ const menuData = {
                 protein: 25,
                 carbs: 30,
                 fat: 35,
-                price: 1327
+                price: 349
             },
             'french-toast': {
                 name: 'French Toast',
@@ -45,7 +45,7 @@ const menuData = {
                 protein: 14,
                 carbs: 45,
                 fat: 16,
-                price: 995
+                price: 279
             }
         }
     },
@@ -61,7 +61,7 @@ const menuData = {
                 protein: 12,
                 carbs: 36,
                 fat: 10,
-                price: 1410
+                price: 399
             },
             'pepperoni': {
                 name: 'Pepperoni Pizza',
@@ -72,7 +72,7 @@ const menuData = {
                 protein: 15,
                 carbs: 35,
                 fat: 14,
-                price: 1576
+                price: 449
             },
             'quattro-stagioni': {
                 name: 'Quattro Stagioni',
@@ -83,7 +83,7 @@ const menuData = {
                 protein: 18,
                 carbs: 38,
                 fat: 16,
-                price: 1825
+                price: 499
             },
             'hawaiian': {
                 name: 'Hawaiian Pizza',
@@ -94,7 +94,7 @@ const menuData = {
                 protein: 14,
                 carbs: 38,
                 fat: 11,
-                price: 1659
+                price: 429
             }
         }
     },
@@ -121,7 +121,7 @@ const menuData = {
                 protein: 25,
                 carbs: 50,
                 fat: 20,
-                price: 1659
+                price: 379
             },
             'pesto': {
                 name: 'Penne Pesto',
@@ -132,7 +132,7 @@ const menuData = {
                 protein: 14,
                 carbs: 48,
                 fat: 16,
-                price: 1410
+                price: 349
             },
             'alfredo': {
                 name: 'Fettuccine Alfredo',
@@ -143,7 +143,7 @@ const menuData = {
                 protein: 18,
                 carbs: 52,
                 fat: 28,
-                price: 1576
+                price: 399
             }
         }
     },
@@ -159,7 +159,7 @@ const menuData = {
                 protein: 0,
                 carbs: 1,
                 fat: 0,
-                price: 331
+                price: 89
             },
             'cappuccino': {
                 name: 'Cappuccino',
@@ -170,7 +170,7 @@ const menuData = {
                 protein: 6,
                 carbs: 12,
                 fat: 4,
-                price: 497
+                price: 129
             },
             'latte': {
                 name: 'Caffè Latte',
@@ -181,7 +181,7 @@ const menuData = {
                 protein: 8,
                 carbs: 15,
                 fat: 6,
-                price: 539
+                price: 149
             },
             'americano': {
                 name: 'Americano',
@@ -192,7 +192,7 @@ const menuData = {
                 protein: 1,
                 carbs: 2,
                 fat: 0,
-                price: 414
+                price: 109
             },
             'mocha': {
                 name: 'Caffè Mocha',
@@ -203,7 +203,7 @@ const menuData = {
                 protein: 10,
                 carbs: 35,
                 fat: 12,
-                price: 663
+                price: 179
             }
         }
     }
@@ -1270,7 +1270,10 @@ function applyPromoCode() {
 function updateDeliveryOption() {
     const selectedOption = document.querySelector('input[name="delivery"]:checked').value;
     deliveryOption = selectedOption;
+    currentDeliveryOption = selectedOption;
+    console.log('Delivery option changed to:', selectedOption);
     updateCartTotals();
+    updateCartDisplay();
 }
 
 function updateOrderNotes() {
@@ -1284,7 +1287,7 @@ function calculateTotal() {
 
     // Calculate delivery fee
     if (deliveryOption === 'delivery') {
-        deliveryFee = currentPromo && currentPromo.type === 'delivery' ? 0 : 2.99;
+        deliveryFee = currentPromo && currentPromo.type === 'delivery' ? 0 : 49;
     }
 
     // Calculate discount
@@ -1296,7 +1299,7 @@ function calculateTotal() {
         }
     }
 
-    const tax = (subtotal + deliveryFee - discount) * 0.08;
+    const tax = (subtotal + deliveryFee - discount) * 0.18;
     return subtotal + deliveryFee + tax - discount;
 }
 
@@ -1307,7 +1310,7 @@ function updateCartTotals() {
 
     // Calculate delivery fee
     if (deliveryOption === 'delivery') {
-        deliveryFee = currentPromo && currentPromo.type === 'delivery' ? 0 : 2.99;
+        deliveryFee = currentPromo && currentPromo.type === 'delivery' ? 0 : 49;
     }
 
     // Calculate discount
@@ -1319,7 +1322,7 @@ function updateCartTotals() {
         }
     }
 
-    const tax = (subtotal + deliveryFee - discount) * 0.08;
+    const tax = (subtotal + deliveryFee - discount) * 0.18;
     const total = subtotal + deliveryFee + tax - discount;
 
     // Update display
@@ -1577,9 +1580,7 @@ function addItemNote(itemKey) {
     }
 }
 
-function updateDeliveryOption() {
-    updateCartTotals();
-}
+
 
 function applyPromoCode() {
     const promoInput = document.getElementById('promoInput');

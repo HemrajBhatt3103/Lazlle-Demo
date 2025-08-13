@@ -930,7 +930,7 @@ window.testLogin = function () {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
 
-    if (usernameInput && passwordInput) {   
+    if (usernameInput && passwordInput) {
         usernameInput.value = 'admin';
         passwordInput.value = 'admin';
         console.log('Set admin credentials');
