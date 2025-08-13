@@ -12,7 +12,7 @@ const menuData = {
                 protein: 8,
                 carbs: 35,
                 fat: 18,
-                price: 299
+                price: 180
             },
             'pancakes': {
                 name: 'Fluffy Pancakes',
@@ -23,7 +23,7 @@ const menuData = {
                 protein: 12,
                 carbs: 65,
                 fat: 15,
-                price: 249
+                price: 120
             },
             'eggs-benedict': {
                 name: 'Eggs Benedict',
@@ -34,7 +34,7 @@ const menuData = {
                 protein: 25,
                 carbs: 30,
                 fat: 35,
-                price: 349
+                price: 220
             },
             'french-toast': {
                 name: 'French Toast',
@@ -45,7 +45,7 @@ const menuData = {
                 protein: 14,
                 carbs: 45,
                 fat: 16,
-                price: 279
+                price: 150
             }
         }
     },
@@ -61,7 +61,7 @@ const menuData = {
                 protein: 12,
                 carbs: 36,
                 fat: 10,
-                price: 399
+                price: 250
             },
             'pepperoni': {
                 name: 'Pepperoni Pizza',
@@ -72,7 +72,7 @@ const menuData = {
                 protein: 15,
                 carbs: 35,
                 fat: 14,
-                price: 449
+                price: 280
             },
             'quattro-stagioni': {
                 name: 'Quattro Stagioni',
@@ -83,7 +83,7 @@ const menuData = {
                 protein: 18,
                 carbs: 38,
                 fat: 16,
-                price: 499
+                price: 320
             },
             'hawaiian': {
                 name: 'Hawaiian Pizza',
@@ -94,7 +94,7 @@ const menuData = {
                 protein: 14,
                 carbs: 38,
                 fat: 11,
-                price: 429
+                price: 290
             }
         }
     },
@@ -121,7 +121,7 @@ const menuData = {
                 protein: 25,
                 carbs: 50,
                 fat: 20,
-                price: 379
+                price: 240
             },
             'pesto': {
                 name: 'Penne Pesto',
@@ -132,7 +132,7 @@ const menuData = {
                 protein: 14,
                 carbs: 48,
                 fat: 16,
-                price: 349
+                price: 220
             },
             'alfredo': {
                 name: 'Fettuccine Alfredo',
@@ -143,7 +143,7 @@ const menuData = {
                 protein: 18,
                 carbs: 52,
                 fat: 28,
-                price: 399
+                price: 260
             }
         }
     },
@@ -159,7 +159,7 @@ const menuData = {
                 protein: 0,
                 carbs: 1,
                 fat: 0,
-                price: 89
+                price: 60
             },
             'cappuccino': {
                 name: 'Cappuccino',
@@ -170,7 +170,7 @@ const menuData = {
                 protein: 6,
                 carbs: 12,
                 fat: 4,
-                price: 129
+                price: 80
             },
             'latte': {
                 name: 'Caffè Latte',
@@ -181,7 +181,7 @@ const menuData = {
                 protein: 8,
                 carbs: 15,
                 fat: 6,
-                price: 149
+                price: 90
             },
             'americano': {
                 name: 'Americano',
@@ -192,7 +192,7 @@ const menuData = {
                 protein: 1,
                 carbs: 2,
                 fat: 0,
-                price: 109
+                price: 70
             },
             'mocha': {
                 name: 'Caffè Mocha',
@@ -203,7 +203,7 @@ const menuData = {
                 protein: 10,
                 carbs: 35,
                 fat: 12,
-                price: 179
+                price: 110
             }
         }
     }
